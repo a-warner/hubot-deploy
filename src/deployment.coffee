@@ -41,6 +41,7 @@ class Deployment
     @env in @environments
 
   isAllowedRoom: (room) ->
+    console.log("checking if #{room} is allowed, allowedRooms is #{@allowedRooms}")
     !@allowedRooms? || room in @allowedRooms
 
   # Retrieves a fully constructed request body and removes sensitive config info
